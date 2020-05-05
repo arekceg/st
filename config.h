@@ -223,7 +223,7 @@ static char *openurlcmd[] = { "/bin/sh", "-c",
     "externalpipe", NULL };
 
 static char *openticketcmd[] = { "/bin/sh", "-c",
-    "sed 's/.*│//g' | grep -aEo '(BASE-[0-9]+.+\\n)' | uniq | rofi -dmenu -i -p 'Open which ticket?' -l 10 | grep -aEo '(BASE-[0-9]+)' | sed 's/^/ https:\\/\\/helpdesk\\.bravurasolutions\\.com\\/browse\\//' | xargs -r xdg-open",
+    "sed 's/.*│//g' | grep -aEo '(BASE-[0-9]+.*)' | uniq | rofi -dmenu -i -p 'Open which ticket?' -l 10 | grep -aEo '(BASE-[0-9]+)' | sed 's/^/ https:\\/\\/helpdesk\\.bravurasolutions\\.com\\/browse\\//' | xargs -r xdg-open",
     "externalpipe", NULL };
 
 static char *copyurlcmd[] = { "/bin/sh", "-c",
